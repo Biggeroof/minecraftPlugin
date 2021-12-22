@@ -1,0 +1,4 @@
+{
+    "maven.terminal.useJavaHome": true,
+    "-Dfile.encoding=UTF-8": true
+}

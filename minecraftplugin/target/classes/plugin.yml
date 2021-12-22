@@ -1,0 +1,3 @@
+main: dev.cibmc.spigot.minecraftplugin.App
+name: minecraftplugin
+version: 0.1
