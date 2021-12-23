@@ -1,8 +1,6 @@
 package dev.cibmc.spigot.minecraftplugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import dev.cibmc.EventListener;
-
 public class App extends JavaPlugin {
     @Override
     public void onEnable() 
