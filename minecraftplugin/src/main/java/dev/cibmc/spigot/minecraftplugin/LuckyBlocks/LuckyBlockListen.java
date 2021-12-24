@@ -7,19 +7,16 @@ import java.util.Random;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.World;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.enchantments.EnchantmentWrapper;
 import org.bukkit.entity.Cow;
 import org.bukkit.entity.Creeper;
+import org.bukkit.entity.LightningStrike;
 import org.bukkit.entity.Villager;
 import org.bukkit.entity.Zombie;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.MainHand;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -66,7 +63,9 @@ public class LuckyBlockListen implements Listener
                 for(int i = 0; i < 5; i++)
                 {
                     location.getWorld().spawn(location, Creeper.class);
+                    location.getWorld().spawn(location, LightningStrike.class);
                 }
+                
                 break;
                 
         }
@@ -91,6 +90,7 @@ public class LuckyBlockListen implements Listener
             {
             Collections.shuffle(possible);
             Enchantment chosen = possible.get(0);
+            possible.remove(0);
             item.addEnchantment(chosen, rand.nextInt(chosen.getMaxLevel()) + 1);
         }
     }
